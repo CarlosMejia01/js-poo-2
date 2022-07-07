@@ -1,29 +1,18 @@
-function Person() {
-    this.name = '';
-    this.lastname = '';
+class Person {
+    constructor(name, lastname) {
+        this.name = name;
+        this.lastname = lastname;
+    }
 }
 
-function Programmer() {
-    this.language = '';
+class Programmer extends Person {
+    constructor(language) {
+        super();
+        this.language = language;
+    }
 }
-
-Programmer.prototype = new Person();
-
-
-console.log(Programmer);
-console.log(Person);
 
 const person = new Person();
-
-person.name = 'maria';
-person.lastname = 'perez';
-
-console.log(person)
-
+console.log(person);
 const programmer = new Programmer();
-
-programmer.name = 'ryan';
-programmer.lastname = 'ray';
-programmer.language = 'js';
-
 console.log(programmer);
