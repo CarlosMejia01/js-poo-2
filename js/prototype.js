@@ -17,7 +17,9 @@ Person.prototype.greet = function() {
     return `Hello I'am ${this.name};`
 }
 
-console.log(john.greet());
-console.log(mario.greet());
-console.log(maria.greet());
-console.log(jose.greet());
+Person.prototype.age = 100;
+
+console.log(john.age);
+console.log(mario.age);
+console.log(maria.age);
+console.log(jose.age);
